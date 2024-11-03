@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  background-color: #efedec;
+}
+
+main {
+  background-color: rgb(78, 20, 20);
+  height: 30vh;
+}
