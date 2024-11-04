@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #8c543f91;
+}
+
 .home {
   margin: 0;
   padding: 0;
@@ -13,6 +19,7 @@
 
 .text-container {
   margin-top: 50px;
+  color: #ffffff;
   align-items: flex-start;
 }
 
@@ -34,6 +41,9 @@ p {
 
 .logoHome {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: 8px;
 }
 
 
