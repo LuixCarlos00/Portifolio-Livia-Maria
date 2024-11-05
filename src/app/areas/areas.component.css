@@ -45,6 +45,15 @@
   display: flex;
   margin-top: 100px;
   gap: 2px;
+
+}
+
+.Areas:hover {
+  opacity: 0.8;
+}
+
+.Areas .Areas_text {
+  opacity: 1;
 }
 
 .Areas_text {
@@ -56,6 +65,14 @@
   height: 150px;
   border: 1px solid black;
   border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.Areas_text:hover {
+  background-color: #8c543f;
+  color: white;
+  transform: translateY(-20px);
+  cursor: pointer;
 }
 
 .Areas_text_title {

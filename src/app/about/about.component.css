@@ -14,16 +14,15 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
 }
 
-.text-container {
+.container_text {
   margin-top: 50px;
   color: #ffffff;
   align-items: flex-start;
 }
 
-.image-container {
+.container {
   display: flex;
   gap: 20px;
 }
@@ -42,8 +41,16 @@ p {
 .logoHome {
   object-fit: cover;
   width: 100%;
-  height: 100%;
-  margin-top: 8px;
+  height: auto;
+}
+
+.logoHome:active {
+  transform: scale3d(1.1, 1.1, 1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+  transition: transform 0.3s ease-in-out;
 }
 
 
@@ -57,11 +64,11 @@ p {
     height: auto;
   }
 
-  .text-container {
+  .container_text {
     margin-top: 0px;
   }
 
-  .image-container {
+  .container {
     flex-direction: column;
     align-items: center;
   }
