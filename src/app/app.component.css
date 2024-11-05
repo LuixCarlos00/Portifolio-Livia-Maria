@@ -6,7 +6,7 @@
 header {
   margin: 0;
   padding: 0;
-  background-color: #8c543f;
+  background-color: #FFFFFF
 }
 
 nav {
@@ -40,11 +40,14 @@ a {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 a:hover {
-  color: rgb(26, 0, 170);
+  color: rgb(255, 230, 3);
+  transform: translateX(-20px);
+  transition: 0.5s;
+
 }
 
 .logo {
@@ -75,23 +78,23 @@ hr {
 .container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 70% 30%;
-  align-items: center;
-
+  grid-template-columns: 50% 50%;
 }
 
 .container__caixa {
-  margin: 0 10em;
-  width: 100%;
+  margin-left: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 
 
 p,
 h1 {
-  margin-right: 200px;
   padding: 0;
-  color: white;
+  color: rgb(243, 243, 243);
   font-size: 25px;
 }
 
