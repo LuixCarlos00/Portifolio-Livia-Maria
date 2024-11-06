@@ -7,13 +7,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #8c543f91;
 }
 
 .home {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  height: auto;
+  background-color: #8c543f91;
 }
 
 .container_text {
@@ -26,6 +24,8 @@ body {
   display: flex;
   gap: 20px;
 }
+
+
 
 h1 {
   margin-bottom: 20px;
