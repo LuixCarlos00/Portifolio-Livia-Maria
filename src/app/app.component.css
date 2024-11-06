@@ -41,10 +41,11 @@ a {
   padding: 0;
   text-decoration: none;
   color: rgb(0, 0, 0);
+  font-weight: 600;
 }
 
 a:hover {
-  color: rgb(255, 230, 3);
+  color: rgb(20, 3, 255);
   transform: translateX(-20px);
   transition: 0.5s;
 
