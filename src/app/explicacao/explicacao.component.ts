@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { log } from 'node:console';
 
 @Component({
   selector: 'app-explicacao',
@@ -18,7 +19,7 @@ export class ExplicacaoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    console.log(this.data);
     if (this.data == 'Civil') {
       this.Explicacao = '';
     } else if (this.data == 'Informatica') {

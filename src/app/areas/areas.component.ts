@@ -26,13 +26,15 @@ export class AreasComponent implements OnInit {
 
 
   Explicacao(valor: string) {
-    const dialogRef = this.dialog.open(ExplicacaoComponent, {
-      width: '50%',
-      height: '50%',
-      data: {
-        informaçoes: 'valor'
-      }
-    })
+    else if (valor == 'Trabalhista') {
+      const dialogRef = this.dialog.open(DireitoTrabalhistaComponent, {
+        width: '50%',
+        height: '50%',
+        data: {
+          informaçoes: valor
+        }
+      })
+    }
   }
 
 }
