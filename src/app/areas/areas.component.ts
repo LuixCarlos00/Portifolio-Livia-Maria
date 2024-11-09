@@ -44,6 +44,16 @@ export class AreasComponent implements OnInit {
         }
       })
     }
+    else if (valor == 'Consumidor') {
+      const dialogRef = this.dialog.open(DireitoConsumidorComponent, {
+        width: '50%',
+        height: '50%',
+        data: {
+          informaçoes: valor
+        }
+      })
+    }
+
   }
 
 }
