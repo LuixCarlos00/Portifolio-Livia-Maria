@@ -1,7 +1,10 @@
-import { Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ExplicacaoComponent } from '../explicacao/explicacao.component';
+import { DireitoCivilComponent } from '../direitoCivil/direitoCivil.component';
+import { DireitoFamiliaComponent } from '../direitoFamilia/direitoFamilia.component';
+import { DireitoTrabalhistaComponent } from '../direitoTrabalhista/direitoTrabalhista.component';
+import { DireitoConsumidorComponent } from '../direitoConsumidor/direitoConsumidor.component';
 
 
 
@@ -35,6 +38,15 @@ export class AreasComponent implements OnInit {
         }
       })
     } else if (valor == 'Familia') {
+
+      const dialogRef = this.dialog.open(DireitoFamiliaComponent, {
+        width: '50%',
+        height: '50%',
+        data: {
+          informaçoes: valor
+        }
+      })
+    }
     else if (valor == 'Trabalhista') {
       const dialogRef = this.dialog.open(DireitoTrabalhistaComponent, {
         width: '50%',
