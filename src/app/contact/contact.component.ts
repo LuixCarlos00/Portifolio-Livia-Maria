@@ -10,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+
+
+
+  downloadCurriculum() {
+    const link = document.createElement('a');
+    link.href = '../../assets/Curriculum Vitae.pdf';
+    link.download = 'curriculo.pdf';
+    link.click();
+
+  }
+
 }
