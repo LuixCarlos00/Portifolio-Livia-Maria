@@ -24,6 +24,7 @@ export class AreasComponent implements OnInit {
 
   ngOnInit(): void {
 
+
   }
 
 
