@@ -14,21 +14,33 @@ body {
   background-color: #8c543f91;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
 .container_text {
+  margin-left: -50px;
   margin-top: 50px;
   color: #000000;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.container {
-  display: flex;
-  gap: 20px;
+.text {
+  font-size: 20px;
+  width: 80%;
 }
-
 
 
 h1 {
-  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+h1 p {
+  margin: 0px;
+  margin-left: 30px;
 }
 
 p {
@@ -40,7 +52,7 @@ p {
 
 .logoHome {
   object-fit: cover;
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
@@ -55,8 +67,19 @@ p {
 
 
 
-@media screen and (max-width: 768px) {
 
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 750px) {
   .home {
     margin: 0;
     padding: 0;
@@ -64,16 +87,31 @@ p {
     height: auto;
   }
 
-  .container_text {
-    margin-top: 0px;
+  .logoHome {
+    width: 100%;
   }
+
 
   .container {
     flex-direction: column;
     align-items: center;
   }
 
-  .logoHome {
-    width: 100%;
+  .container_text {
+    margin: 0px;
+    margin-top: 50px;
+    color: #000000;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  h1 p {
+    margin: 0px 0px 10px 30px;
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 20px;
+    width: 80%;
   }
 }

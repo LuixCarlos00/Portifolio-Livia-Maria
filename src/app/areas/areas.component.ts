@@ -31,8 +31,8 @@ export class AreasComponent implements OnInit {
   Explicacao(valor: string) {
     if (valor == 'Civil') {
       const dialogRef = this.dialog.open(DireitoCivilComponent, {
-        width: '50%',
-        height: '50%',
+        width: 'auto',
+        height: 'auto',
         data: {
           informaçoes: valor
         }
@@ -40,31 +40,31 @@ export class AreasComponent implements OnInit {
     } else if (valor == 'Familia') {
 
       const dialogRef = this.dialog.open(DireitoFamiliaComponent, {
-        width: '50%',
-        height: '50%',
+        width: 'auto',
+        height: 'auto',
         data: {
           informaçoes: valor
         }
       })
     }
-    else if (valor == 'Trabalhista') {
-      const dialogRef = this.dialog.open(DireitoTrabalhistaComponent, {
-        width: '50%',
-        height: '50%',
-        data: {
-          informaçoes: valor
-        }
-      })
-    }
-    else if (valor == 'Consumidor') {
-      const dialogRef = this.dialog.open(DireitoConsumidorComponent, {
-        width: '50%',
-        height: '50%',
-        data: {
-          informaçoes: valor
-        }
-      })
-    }
+    // else if (valor == 'Trabalhista') {
+    //   const dialogRef = this.dialog.open(DireitoTrabalhistaComponent, {
+    //     width: '50%',
+    //     height: '50%',
+    //     data: {
+    //       informaçoes: valor
+    //     }
+    //   })
+    // }
+    // else if (valor == 'Consumidor') {
+    //   const dialogRef = this.dialog.open(DireitoConsumidorComponent, {
+    //     width: '50%',
+    //     height: '50%',
+    //     data: {
+    //       informaçoes: valor
+    //     }
+    //   })
+    // }
 
   }
 
