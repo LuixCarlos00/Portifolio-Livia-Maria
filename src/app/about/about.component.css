@@ -7,17 +7,66 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  background-color: #d0b8a0;
 }
 
 .home {
-  height: auto;
-  background-color: #8c543f91;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
+  margin: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }
+
+.example-card {
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .container_text {

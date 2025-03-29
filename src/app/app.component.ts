@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
@@ -16,8 +16,9 @@ import { AreasComponent } from './areas/areas.component';
     ContactComponent,
     FooterComponent,
     AreasComponent
-
   ],
+
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

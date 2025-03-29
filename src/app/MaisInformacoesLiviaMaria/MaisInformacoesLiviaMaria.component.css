@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d0b8a0;
+  overflow-y: auto;
+  /* Permite o scroll vertical */
+  height: 100vh;
+  /* Garantir que a altura do body ocupe 100% da altura da janela */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container_text {
+  margin-left: -50px;
+  margin-top: 50px;
+  color: #000000;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.text {
+  font-size: 20px;
+  width: 80%;
+}
+
+
+h1 {
+  font-size: 30px;
+}
+
+h1 p {
+  margin: 0px;
+  margin-left: 30px;
+}
+
+p {
+  margin: 30px;
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+.logoHome {
+  object-fit: cover;
+  width: 50%;
+  height: auto;
+}
+
+.logoHome:active {
+  transform: scale3d(1.1, 1.1, 1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.Curriculum-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #a55d00;
+}

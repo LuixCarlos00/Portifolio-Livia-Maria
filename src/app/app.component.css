@@ -31,7 +31,7 @@ li,
 header {
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF
+  background-color: #f6ede3
 }
 
 nav {
@@ -45,11 +45,10 @@ nav {
 
 ul {
   width: 100%;
-  margin: 50px;
   padding: 0px;
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -78,15 +77,14 @@ a:hover {
 
 .logo {
   margin: 20px;
-  padding: 20px;
-  width: 150px;
+  width: 200px;
   object-fit: cover;
 }
 
 
 
 hr {
-  border: 2px solid rgb(78, 20, 20);
+  border: 2px solid black
 }
 
 .home {
@@ -141,6 +139,7 @@ h1 {
   body {
     margin: 0;
     padding: 0;
+    background-color: #f6ede3
   }
 
   header {
