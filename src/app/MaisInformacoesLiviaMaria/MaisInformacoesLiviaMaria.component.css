@@ -80,3 +80,42 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #a55d00;
 }
+
+
+
+@media screen and (max-width: 750px) {
+  .home {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .logoHome {
+    width: 100%;
+  }
+
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container_text {
+    margin: 0px;
+    margin-top: 50px;
+    color: #000000;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  h1 p {
+    margin: 0px 0px 10px 30px;
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 20px;
+    width: 80%;
+  }
+}
