@@ -29,9 +29,9 @@ export class AboutComponent {
     },
     {
       index: 2,
-      title: 'GABRIELE DASSA CALIXTO | ASSISTENTE JURIDICO',
-      subtitle: '',
-      imageSrc: '../../assets/imagens/gabi.jpg', // Caminho da imagem
+      title: 'GABRIELE DASSA CALIXTO',
+      subtitle: '      ',
+      imageSrc: '../../assets/imagens/gabi2.png', // Caminho da imagem
       imageAlt: 'Photo of GABRIELE DASSA CALIXTO'
     }
   ];
