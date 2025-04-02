@@ -6,13 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./MaisInformacoesGabrieleDassa.component.css']
 })
 export class MaisInformacoesGabrieleDassaComponent implements OnInit {
-  downloadCurriculum() {
-    throw new Error('Method not implemented.');
-  }
+ 
 
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  downloadCurriculum() {
+    const link = document.createElement('a');
+    link.href = '../../assets/GABRIELE.pdf';
+    link.download = 'Curriculo-Gabriele.pdf';
+    link.click();
+
+  }
 }
