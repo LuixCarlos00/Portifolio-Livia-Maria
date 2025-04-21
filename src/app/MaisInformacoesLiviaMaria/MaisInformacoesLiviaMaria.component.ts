@@ -13,7 +13,7 @@ export class MaisInformacoesLiviaMariaComponent implements OnInit {
   }
   downloadCurriculum() {
     const link = document.createElement('a');
-    link.href = '../../assets/Curriculum Vitae.pdf';
+    link.href = '../../assets/CurriculoLivia.pdf';
     link.download = 'Curriculo-Livia.pdf';
     link.click();
 
