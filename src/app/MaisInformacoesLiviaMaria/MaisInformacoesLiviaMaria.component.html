@@ -1,42 +1,83 @@
-<body>
-  <div class="container">
-
-    <img src="../../assets/imagens/meTwo-removebg-preview.png" alt="justcy" class="logoHome">
-
-    <div class="container_text">
-      <h1>
-        <p>Lívia Maria da Silveira</p>
-        <p> Advogada|OAB/MG 239.128</p>
-      </h1>
-      <p class="text">
-        Graduada em Direito pelo Centro Universitário de Formiga - UNIFOR/MG. Durante a graduação, atuei como monitora
-        nas disciplinas
-        de Direito
-        Civil, Direito Empresarial e Direito Processual Civil, aprofundando meus conhecimentos nessas áreas.
-        Atualmente, sou pós-graduanda em Direito Civil pela PUC Minas.
-      </p>
-
-      <p class="text">
-        Minha experiência acadêmica inclui participação em projetos de pesquisa e extensão na Mostra Integrada de
-        Pesquisa e
-        Extensão
-        (MIPE) – 2023/2024, o que contribuiu para a construção de uma base jurídica sólida e para o aprimoramento
-        das minhas
-        habilidades analíticas.
-      </p>
-
-      <p class="text">
-        Meu objetivo é oferecer soluções jurídicas eficientes e estratégicas, sempre pautadas na ética, no
-        conhecimento técnico
-        e na compreensão das necessidades específicas de cada cliente.
-      </p>
+<div class="modal-container">
+  <div class="modal-header">
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <div class="profile-image-wrapper">
+        <img src="../../assets/imagens/Livia.jpg" alt="Livia Maria" class="profile-image">
+      </div>
+      <div class="profile-info">
+        <h1 class="profile-name">Livia Maria da Silveira</h1>
+        <p class="profile-title">Advogada</p>
+        <div class="profile-badge">
+          <i class="fas fa-certificate"></i>
+          <span>OAB/MG 239.128</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="container">
-    <a class="Curriculum-button" (click)="downloadCurriculum()">
-      <i class="fas fa-file-pdf"></i> Curriculum Vitae
+
+  <div class="modal-body">
+    <section class="section">
+      <h2 class="section-title">
+        <i class="fas fa-user-tie"></i>
+        Sobre
+      </h2>
+      <p class="section-text">
+        Graduada em Direito pelo Centro Universitario de Formiga - UNIFOR/MG. Durante a graduacao,
+        atuei como monitora nas disciplinas de Direito Civil, Direito Empresarial e Direito Processual Civil,
+        aprofundando meus conhecimentos nessas areas.
+      </p>
+      <p class="section-text">
+        Atualmente, sou pos-graduanda em Direito Civil pela PUC Minas.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">
+        <i class="fas fa-briefcase"></i>
+        Experiencia Academica
+      </h2>
+      <p class="section-text">
+        Minha experiencia academica inclui participacao em projetos de pesquisa e extensao na
+        Mostra Integrada de Pesquisa e Extensao (MIPE) 2023/2024, o que contribuiu para a construcao
+        de uma base juridica solida e para o aprimoramento das minhas habilidades analiticas.
+      </p>
+    </section>
+
+    <section class="section highlight">
+      <div class="highlight-icon">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <h2 class="section-title">Objetivo Profissional</h2>
+      <p class="section-text">
+        Oferecer solucoes juridicas eficientes e estrategicas, sempre pautadas na etica,
+        no conhecimento tecnico e na compreensao das necessidades especificas de cada cliente.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">
+        <i class="fas fa-balance-scale"></i>
+        Areas de Atuação
+      </h2>
+      <div class="tags-container">
+        <span class="tag">Direito Civil</span>
+        <span class="tag">Direito Empresarial</span>
+        <span class="tag">Direito Processual Civil</span>
+        <span class="tag">Direito de Familia</span>
+        <span class="tag">Direito do Consumidor</span>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal-footer">
+    <a class="btn-cv" (click)="downloadCurriculum()">
+      <i class="fas fa-file-pdf"></i>
+      <span>Curriculum Vitae</span>
+    </a>
+    <a href="https://wa.me/5537998325040" target="_blank" class="btn-contact">
+      <i class="fab fa-whatsapp"></i>
+      <span>Entrar em Contato</span>
     </a>
   </div>
-  <br>
-  <br>
-</body>
+</div>

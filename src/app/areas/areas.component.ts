@@ -1,72 +1,52 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { ExplicacaoComponent } from '../explicacao/explicacao.component';
 import { DireitoCivilComponent } from '../direitoCivil/direitoCivil.component';
 import { DireitoFamiliaComponent } from '../direitoFamilia/direitoFamilia.component';
-import { DireitoTrabalhistaComponent } from '../direitoTrabalhista/direitoTrabalhista.component';
-import { DireitoConsumidorComponent } from '../direitoConsumidor/direitoConsumidor.component';
 
-
-
+/**
+ * Componente de Areas de Atuacao
+ * Exibe as especialidades juridicas da equipe
+ */
 @Component({
   selector: 'app-areas',
   standalone: true,
   imports: [
-    MatDialogModule
+    CommonModule,
+    MatDialogModule,
+    DireitoCivilComponent,
+    DireitoFamiliaComponent
   ],
   templateUrl: './areas.component.html',
   styleUrl: './areas.component.css'
 })
-export class AreasComponent implements OnInit {
+export class AreasComponent {
 
   constructor(private dialog: MatDialog) { }
 
-
-  ngOnInit(): void {
-
-
-  }
-
-
-
-  Explicacao(valor: string) {
-    if (valor == 'Civil') {
-      const dialogRef = this.dialog.open(DireitoCivilComponent, {
-        width: 'auto',
+  /**
+   * Abre o modal com explicacao da area de atuacao
+   * @param valor - 'Civil' ou 'Familia'
+   */
+  Explicacao(valor: string): void {
+    if (valor === 'Civil') {
+      this.dialog.open(DireitoCivilComponent, {
+        width: '90%',
+        maxWidth: '700px',
         height: 'auto',
-        data: {
-          informaçoes: valor
-        }
-      })
-    } else if (valor == 'Familia') {
-
-      const dialogRef = this.dialog.open(DireitoFamiliaComponent, {
-        width: 'auto',
+        maxHeight: '90vh',
+        panelClass: 'custom-dialog',
+        data: { informacoes: valor }
+      });
+    } else if (valor === 'Familia') {
+      this.dialog.open(DireitoFamiliaComponent, {
+        width: '90%',
+        maxWidth: '700px',
         height: 'auto',
-        data: {
-          informaçoes: valor
-        }
-      })
+        maxHeight: '90vh',
+        panelClass: 'custom-dialog',
+        data: { informacoes: valor }
+      });
     }
-    // else if (valor == 'Trabalhista') {
-    //   const dialogRef = this.dialog.open(DireitoTrabalhistaComponent, {
-    //     width: '50%',
-    //     height: '50%',
-    //     data: {
-    //       informaçoes: valor
-    //     }
-    //   })
-    // }
-    // else if (valor == 'Consumidor') {
-    //   const dialogRef = this.dialog.open(DireitoConsumidorComponent, {
-    //     width: '50%',
-    //     height: '50%',
-    //     data: {
-    //       informaçoes: valor
-    //     }
-    //   })
-    // }
-
   }
-
 }

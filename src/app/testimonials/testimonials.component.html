@@ -1,0 +1,55 @@
+<!-- ============================================
+     DEPOIMENTOS - CARROSSEL
+     ============================================ -->
+
+<section class="testimonials-section">
+  <div class="section-header">
+    <span class="section-badge">Depoimentos</span>
+    <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+    <p class="section-subtitle">Experiencias reais de quem confiou em nosso trabalho</p>
+  </div>
+
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <div class="quote-icon">
+        <i class="fas fa-quote-left"></i>
+      </div>
+
+      <p class="testimonial-text">{{ testimonials[currentIndex].text }}</p>
+
+      <div class="testimonial-author">
+        <div class="author-avatar">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="author-info">
+          <h4 class="author-name">{{ testimonials[currentIndex].name }}</h4>
+          <span class="author-role">{{ testimonials[currentIndex].role }}</span>
+        </div>
+      </div>
+
+      <div class="testimonial-rating">
+        <i class="fas fa-star" *ngFor="let star of [1,2,3,4,5]"></i>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <div class="testimonial-controls">
+      <button class="control-btn" (click)="prev()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="dots">
+        <span
+          class="dot"
+          *ngFor="let t of testimonials; let i = index"
+          [class.active]="i === currentIndex"
+          (click)="goTo(i)"
+        ></span>
+      </div>
+
+      <button class="control-btn" (click)="next()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,63 +1,94 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!-- ============================================
+     PROFISSIONAIS - CARDS ELEGANTES
+     ============================================ -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@angular/material@15.0.0/bundles/material.umd.min.css" rel="stylesheet">
-</head>
+<section class="profissionais-section">
+  <div class="profissionais-container">
 
-<body>
-  <main>
-    <section id="home" class="home">
-      <div class="container">
-        <mat-card class="example-card" *ngFor="let card of cardData ; let i = index">
-          <mat-card-header>
-            <mat-card-title class="card-title">{{ card.title }}</mat-card-title>
-            <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image [src]="card.imageSrc" [alt]="card.imageAlt" (click)="openDialog(card.index)">
-        </mat-card>
+    <!-- Card Livia Maria -->
+    <article class="profissional-card" (click)="openDialog(1)">
+      <div class="card-image-wrapper">
+        <div class="card-image-overlay"></div>
+        <img
+          src="../../assets/imagens/Livia.jpg"
+          alt="Livia Maria da Silveira - Advogada"
+          class="card-image"
+        >
+        <div class="card-badge">
+          <i class="fas fa-certificate"></i>
+          <span>OAB/MG 239.128</span>
+        </div>
       </div>
 
-
-
-      <!-- <div class="container">
-
-        <img src="../../assets/imagens/meTwo-removebg-preview.png" alt="justcy" class="logoHome">
-
-        <div class="container_text">
-          <h1>
-            <p>Lívia Maria da Silveira</p>
-            <p> Advogada | OAB/MG 239.128</p>
-          </h1>
-          <p class="text">
-            Graduada em Direito pelo Centro Universitário de Formiga - UNIFOR/MG. Atuei como monitora nas disciplinas
-            de Direito
-            Civil, Direito Empresarial e Direito Processual Civil, aprofundando meus conhecimentos nessas áreas.
-          </p>
-
-          <p class="text">
-            Minha experiência acadêmica inclui participação em projetos de pesquisa e extensão na Mostra Integrada de
-            Pesquisa e
-            Extensão
-            (MIPE) – 2023/2024, o que contribuiu para a construção de uma base jurídica sólida e para o aprimoramento
-            das minhas
-            habilidades analíticas.
-          </p>
-
-          <p class="text">
-            Meu objetivo é oferecer soluções jurídicas eficientes e estratégicas, sempre pautadas na ética, no
-            conhecimento técnico
-            e na compreensão das necessidades específicas de cada cliente.
-          </p>
+      <div class="card-content">
+        <div class="card-header">
+          <h3 class="card-name">Livia Maria da Silveira</h3>
+          <span class="card-title">Advogada</span>
         </div>
-      </div> -->
 
-    </section>
-  </main>
+        <p class="card-description">
+          Graduada em Direito pelo Centro Universitario de Formiga - UNIFOR/MG.
+          Experiencia academica inclui participacao em projetos de pesquisa e extensao.
+        </p>
 
-</body>
+        <div class="card-divider"></div>
 
-</html>
+        <div class="card-areas">
+          <span class="area-tag">Direito Civil</span>
+          <span class="area-tag">Direito de Familia</span>
+          <span class="area-tag">Consumidor</span>
+        </div>
+
+        <button class="card-button">
+          <span>Ver Perfil Completo</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="card-shine"></div>
+    </article>
+
+    <!-- Card Gabriele Dassa -->
+    <article class="profissional-card" (click)="openDialog(2)">
+      <div class="card-image-wrapper">
+        <div class="card-image-overlay"></div>
+        <img
+          src="../../assets/imagens/gabi2.png"
+          alt="Gabriele Dassa Calixto"
+          class="card-image"
+        >
+        <div class="card-badge secondary">
+          <i class="fas fa-user-tie"></i>
+          <span>Equipe</span>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <div class="card-header">
+          <h3 class="card-name">Gabriele Dassa Calixto</h3>
+          <span class="card-title">Equipe Juridica</span>
+        </div>
+
+        <p class="card-description">
+          Profissional dedicada ao suporte juridico e atendimento ao cliente,
+          comprometida com a excelencia nos servicos advocaticios.
+        </p>
+
+        <div class="card-divider"></div>
+
+        <div class="card-areas">
+          <span class="area-tag">Atendimento</span>
+          <span class="area-tag">Suporte Juridico</span>
+        </div>
+
+        <button class="card-button">
+          <span>Ver Perfil Completo</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="card-shine"></div>
+    </article>
+
+  </div>
+</section>

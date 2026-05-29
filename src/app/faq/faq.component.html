@@ -1,0 +1,39 @@
+<!-- ============================================
+     FAQ - PERGUNTAS FREQUENTES
+     ============================================ -->
+
+<section class="faq-section">
+  <div class="section-header">
+    <span class="section-badge">Duvidas</span>
+    <h2 class="section-title">Perguntas Frequentes</h2>
+    <p class="section-subtitle">Esclarecemos as principais duvidas sobre nossos servicos</p>
+  </div>
+
+  <div class="faq-container">
+    <div
+      class="faq-item"
+      *ngFor="let faq of faqs; let i = index"
+      [class.open]="faq.open"
+    >
+      <button class="faq-question" (click)="toggle(i)">
+        <span class="question-text">{{ faq.question }}</span>
+        <span class="question-icon">
+          <i class="fas fa-plus" *ngIf="!faq.open"></i>
+          <i class="fas fa-minus" *ngIf="faq.open"></i>
+        </span>
+      </button>
+
+      <div class="faq-answer" [class.show]="faq.open">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-cta">
+    <p>Ainda tem duvidas?</p>
+    <a href="https://wa.me/5537998325040" target="_blank" class="btn-faq">
+      <i class="fab fa-whatsapp"></i>
+      Fale Conosco
+    </a>
+  </div>
+</section>

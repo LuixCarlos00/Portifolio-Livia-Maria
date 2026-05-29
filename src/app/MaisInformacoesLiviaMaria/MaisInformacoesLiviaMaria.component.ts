@@ -1,21 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatDialogModule } from '@angular/material/dialog';
 
+/**
+ * Componente Modal - Mais Informacoes Livia Maria
+ * Exibe perfil detalhado da advogada
+ */
 @Component({
-  selector: 'app-MaisInformacoesLiviaMaria',
+  selector: 'app-mais-informacoes-livia-maria',
+  standalone: true,
+  imports: [CommonModule, MatDialogModule],
   templateUrl: './MaisInformacoesLiviaMaria.component.html',
-  styleUrls: ['./MaisInformacoesLiviaMaria.component.css']
+  styleUrl: './MaisInformacoesLiviaMaria.component.css'
 })
-export class MaisInformacoesLiviaMariaComponent implements OnInit {
+export class MaisInformacoesLiviaMariaComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-  downloadCurriculum() {
+  /**
+   * Faz download do curriculum em PDF
+   */
+  downloadCurriculum(): void {
     const link = document.createElement('a');
     link.href = '../../assets/CurriculoLivia.pdf';
     link.download = 'Curriculo-Livia.pdf';
     link.click();
-
   }
 }

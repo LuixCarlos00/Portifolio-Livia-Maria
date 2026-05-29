@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-direitoFamilia',
+  selector: 'app-direito-familia',
+  standalone: true,
+  imports: [CommonModule, MatDialogModule],
   templateUrl: './direitoFamilia.component.html',
-  styleUrls: ['./direitoFamilia.component.css']
+  styleUrl: './direitoFamilia.component.css'
 })
-export class DireitoFamiliaComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class DireitoFamiliaComponent {
 }

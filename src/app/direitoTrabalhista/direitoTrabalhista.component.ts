@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-direitoTrabalhista',
+  selector: 'app-direito-trabalhista',
+  standalone: true,
+  imports: [CommonModule, MatDialogModule],
   templateUrl: './direitoTrabalhista.component.html',
-  styleUrls: ['./direitoTrabalhista.component.css']
+  styleUrl: './direitoTrabalhista.component.css'
 })
-export class DireitoTrabalhistaComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class DireitoTrabalhistaComponent {
 }

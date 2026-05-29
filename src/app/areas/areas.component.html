@@ -1,49 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- ============================================
+     AREAS DE ATUACAO - DESIGN MODERNO
+     ============================================ -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+<section class="areas-section">
+  <div class="areas-container">
 
-<body>
-  <main>
-    <section class="home">
-      <div class="image-container">
-        <img src="../../assets/imagens/justcy.jpg" alt="justcy" class="logoHome">
-        <div class="text-overlay">
-          <h2>Áreas de Atuação</h2>
-          <div class="Areas">
-            <section class="Areas_text" (click)="Explicacao('Civil')">
-              <div class="Areas_text_title">
-                <i class="fa-solid fa-handshake"></i>
-                Direito Civil e Consumidor
-              </div>
-            </section>
-            <!-- <section class="Areas_text" (click)="Explicacao('Trabalhista')">
-              <div class="Areas_text_title">
-                <i class="fa-solid fa-briefcase"></i>
-                Direito Trabalhista
-              </div>
-            </section> -->
-            <!-- <section class="Areas_text" (click)="Explicacao('Consumidor')">
-              <div class="Areas_text_title">
-                <i class="fas fa-shield-alt"></i>
-                Direito do Consumidor
-              </div>
-            </section> -->
-            <section class="Areas_text" (click)="Explicacao('Familia')">
-              <div class="Areas_text_title">
-                <i class="fa-solid fa-balance-scale"></i>
-                Direito de Família
-              </div>
-            </section>
-
-          </div>
+    <!-- Card: Direito Civil e Consumidor -->
+    <article class="area-card" (click)="Explicacao('Civil')">
+      <div class="area-icon">
+        <div class="icon-circle">
+          <i class="fas fa-handshake"></i>
         </div>
       </div>
-    </section>
-  </main>
-</body>
+      <h3 class="area-title">Direito Civil e Consumidor</h3>
+      <p class="area-description">
+        Atuacao em contratos, responsabilidade civil, indenizacoes,
+        direitos do consumidor e relacoes de consumo.
+      </p>
+      <div class="area-features">
+        <span class="feature"><i class="fas fa-check"></i> Contratos</span>
+        <span class="feature"><i class="fas fa-check"></i> Indenizacoes</span>
+        <span class="feature"><i class="fas fa-check"></i> Consumidor</span>
+      </div>
+      <button class="area-button">
+        <span>Saiba Mais</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <div class="area-glow"></div>
+    </article>
 
-</html>
+    <!-- Card: Direito de Familia -->
+    <article class="area-card" (click)="Explicacao('Familia')">
+      <div class="area-icon">
+        <div class="icon-circle family">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+      </div>
+      <h3 class="area-title">Direito de Familia</h3>
+      <p class="area-description">
+        Divorcios, guarda de filhos, pensao alimenticia, partilha de bens,
+        inventarios e planejamento sucessorio.
+      </p>
+      <div class="area-features">
+        <span class="feature"><i class="fas fa-check"></i> Divorcio</span>
+        <span class="feature"><i class="fas fa-check"></i> Guarda</span>
+        <span class="feature"><i class="fas fa-check"></i> Inventario</span>
+      </div>
+      <button class="area-button">
+        <span>Saiba Mais</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <div class="area-glow"></div>
+    </article>
+
+  </div>
+</section>

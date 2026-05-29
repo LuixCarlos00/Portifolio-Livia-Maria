@@ -1,37 +1,115 @@
-<body>
-  <div class="container">
-
-    <img src="../../assets/imagens/Gabriele2.png" alt="justcy" class="logoHome">
-
-    <div class="container_text">
-      <h1>
-        <p>Gabriele Dassa Calixto</p>
-      </h1>
-      <p class="text">
-        Sou graduada em Direito pelo Centro Universitário de Formiga – UNIFOR/MG. No Núcleo de Práticas Jurídicas da
-        instituição, adquiri experiência direta na atuação com processos de família.
-      </p>
-
-      <p class="text">
-        Minha trajetória acadêmica inclui cinco anos de participação na Comissão Própria de Avaliação (CPA) do
-        UNIFOR/MG, além
-        de dois anos de estágio na Delegacia Regional de Polícia Civil e dez meses na Perícia da Delegacia Regional de
-        Formiga.
-        Também possuo experiência na advocacia, tendo atuado por oito meses em um escritório especializado na área
-        cível.
-      </p>
-
-      <p class="text">
-        Atualmente, sou pós-graduanda em Direito de Família e Sucessões pela PUC Minas, com o compromisso de garantir os
-        direitos das pessoas por meio de uma defesa eficiente, ética e respeitosa.
-      </p>
+<div class="modal-container">
+  <div class="modal-header">
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <div class="profile-image-wrapper">
+        <img src="../../assets/imagens/gabi2.png" alt="Gabriele Dassa" class="profile-image">
+      </div>
+      <div class="profile-info">
+        <h1 class="profile-name">Gabriele Dassa Calixto</h1>
+        <p class="profile-title">Equipe Juridica</p>
+        <div class="profile-badge">
+          <i class="fas fa-user-tie"></i>
+          <span>Direito de Familia</span>
+        </div>
+      </div>
     </div>
   </div>
-   <div class="container">
-    <a class="Curriculum-button" (click)="downloadCurriculum()">
-      <i class="fas fa-file-pdf"></i> Curriculum Vitae
+
+  <div class="modal-body">
+    <section class="section">
+      <h2 class="section-title">
+        <i class="fas fa-graduation-cap"></i>
+        Formacao
+      </h2>
+      <p class="section-text">
+        Graduada em Direito pelo Centro Universitario de Formiga - UNIFOR/MG.
+        No Nucleo de Praticas Juridicas da instituicao, adquiri experiencia direta na 00e700e3o com processos de familia.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">
+        <i class="fas fa-briefcase"></i>
+        Experiencia Profissional
+      </h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <div class="experience-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="experience-content">
+            <h4>Comissao Propria de Avaliacao (CPA)</h4>
+            <p>5 anos de participacao no UNIFOR/MG</p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="experience-content">
+            <h4>Delegacia de Policia Civil</h4>
+            <p>2 anos de estagio na Delegacia Regional</p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="experience-content">
+            <h4>Pericia da Delegacia Regional</h4>
+            <p>10 meses de experiencia em Formiga</p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <div class="experience-content">
+            <h4>Advocacia Civil</h4>
+            <p>8 meses em escritorio especializado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section highlight">
+      <div class="highlight-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <h2 class="section-title">Compromisso Profissional</h2>
+      <p class="section-text">
+        Atualmente, sou pos-graduanda em Direito de Familia e Sucessoes pela PUC Minas,
+        com o compromisso de garantir os direitos das pessoas por meio de uma defesa eficiente,
+        etica e respeitosa.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">
+        <i class="fas fa-star"></i>
+        Especialidade
+      </h2>
+      <div class="tags-container">
+        <span class="tag primary">Direito de Familia</span>
+        <span class="tag">Sucessoes</span>
+        <span class="tag">Atendimento ao Cliente</span>
+        <span class="tag">Processos Familiares</span>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal-footer">
+    <a class="btn-cv" (click)="downloadCurriculum()">
+      <i class="fas fa-file-pdf"></i>
+      <span>Curriculum Vitae</span>
     </a>
-  </div> 
-  <br>
-  <br>
-</body>
+    <a href="https://wa.me/5537998325040" target="_blank" class="btn-contact">
+      <i class="fab fa-whatsapp"></i>
+      <span>Entrar em Contato</span>
+    </a>
+  </div>
+</div>

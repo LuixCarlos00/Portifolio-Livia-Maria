@@ -1,2 +1,324 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* ============================================
+   PALETA DE CORES - PORTFOLIO JURIDICO
+   Azul Marinho + Dourado: Sofisticacao e Confiança
+   ============================================ */
+
+:root {
+  /* Cores Primarias */
+  --primary-navy: #1a365d;
+  --primary-navy-light: #2c5282;
+  --primary-navy-dark: #0f2744;
+
+  /* Cores de Destaque (Dourado) */
+  --accent-gold: #c9a227;
+  --accent-gold-light: #e0b840;
+  --accent-gold-dark: #a08020;
+
+  /* Cores Neutras */
+  --neutral-white: #ffffff;
+  --neutral-cream: #faf9f7;
+  --neutral-light: #f5f5f0;
+  --neutral-gray: #6b7280;
+  --neutral-dark: #1f2937;
+  --neutral-black: #111827;
+
+  /* Cores de Estado */
+  --success: #059669;
+  --error: #dc2626;
+  --warning: #d97706;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-gold: 0 10px 40px -10px rgba(201, 162, 39, 0.3);
+
+  /* Transicoes */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Bordas */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+/* ============================================
+   RESET E BASE
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--neutral-dark);
+  background-color: var(--neutral-cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TIPOGRAFIA
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--primary-navy);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--neutral-gray);
+}
+
+/* ============================================
+   UTILITARIOS
+   ============================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+/* Delays para animacoes em cascata */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+  color: var(--neutral-white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-navy);
+  border: 2px solid var(--primary-navy);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-navy);
+  color: var(--neutral-white);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--neutral-white);
+  border: 2px solid var(--neutral-white);
+}
+
+.btn-outline:hover {
+  background: var(--neutral-white);
+  color: var(--primary-navy);
+}
+
+/* ============================================
+   SCROLLBAR CUSTOMIZADA
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-navy);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-navy-light);
+}
+
+/* ============================================
+   SELEÇÃO DE TEXTO
+   ============================================ */
+
+::selection {
+  background: var(--accent-gold);
+  color: var(--neutral-white);
+}
+
+/* ============================================
+   MODAIS DO ANGULAR MATERIAL
+   ============================================ */
+
+.custom-dialog .mat-mdc-dialog-container {
+  border-radius: var(--radius-xl) !important;
+  overflow: hidden;
+  max-height: 90vh;
+}
+
+.custom-dialog .mdc-dialog__surface {
+  border-radius: var(--radius-xl) !important;
+  max-height: 90vh;
+}
+
+/* Overlay mais escuro */
+.cdk-overlay-backdrop {
+  background: rgba(15, 39, 68, 0.8) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* ============================================
+   MODAIS RESPONSIVOS - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .custom-dialog .mat-mdc-dialog-container {
+    border-radius: 0 !important;
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  .custom-dialog .mdc-dialog__surface {
+    border-radius: 0 !important;
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  .custom-dialog {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  /* Overlay em mobile */
+  .cdk-overlay-pane {
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
+}

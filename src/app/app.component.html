@@ -1,60 +1,218 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!-- ============================================
+     PORTFOLIO JURIDICO - LIVIA MARIA
+     Design Moderno e Sofisticado
+     ============================================ -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portifolio</title>
-</head>
+<!-- Header Sticky com Glassmorphism -->
+<header class="header" [class.scrolled]="isScrolled">
+  <nav class="nav">
+    <a href="#home" class="nav-logo">
+      <img src="../assets/imagens/M.png" alt="Livia Maria Advocacia" class="logo-img">
+      <span class="logo-text">Livia Maria</span>
+    </a>
 
-<body>
+    <!-- Menu Desktop -->
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="#home" class="nav-link" [class.active]="activeSection === 'home'">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#about" class="nav-link" [class.active]="activeSection === 'about'">Profissionais</a>
+      </li>
+      <li class="nav-item">
+        <a href="#areas" class="nav-link" [class.active]="activeSection === 'areas'">Atuação</a>
+      </li>
+      <li class="nav-item">
+        <a href="#testimonials" class="nav-link" [class.active]="activeSection === 'testimonials'">Depoimentos</a>
+      </li>
+      <li class="nav-item">
+        <a href="#faq" class="nav-link" [class.active]="activeSection === 'faq'">Perguntas</a>
+      </li>
+      <li class="nav-item">
+        <a href="#contact" class="nav-link" [class.active]="activeSection === 'contact'">Contato</a>
+      </li>
+    </ul>
 
-  <header class="header">
-    <nav>
-      <div class="logo">
-        <img src="../assets/imagens/M.png" alt="logo" class="logo ">
+    <!-- CTA Button -->
+    <a href="https://wa.me/5537998325040" target="_blank" class="btn-cta">
+      <i class="fab fa-whatsapp"></i>
+      <span>Fale Conosco</span>
+    </a>
+
+    <!-- Menu Mobile Toggle -->
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Menu Mobile Overlay -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <ul class="mobile-nav-list">
+      <li><a href="#home" (click)="closeMenu()">Home</a></li>
+      <li><a href="#about" (click)="closeMenu()">Profissionais</a></li>
+      <li><a href="#areas" (click)="closeMenu()">Areas de Atuação </a></li>
+      <li><a href="#testimonials" (click)="closeMenu()">Depoimentos</a></li>
+      <li><a href="#faq" (click)="closeMenu()">Perguntas</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5537998325040" target="_blank" class="mobile-cta" (click)="closeMenu()">
+      <i class="fab fa-whatsapp"></i>
+      Fale Conosco
+    </a>
+  </div>
+</header>
+
+<!-- Overlay para menu mobile -->
+<div class="overlay" [class.active]="isMenuOpen" (click)="closeMenu()"></div>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge animate-fadeInUp">
+        <i class="fas fa-scale-balanced"></i>
+        <span>Excelencia Juridica</span>
       </div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Profissionais </a></li>
-        <li><a href="#areas">Áreas de Atuação</a></li>
-        <li><a href="#contact">Contato</a></li>
 
-      </ul>
-    </nav>
-  </header>
+      <h1 class="hero-title animate-fadeInUp delay-100">
+        Defendendo seus<br>
+        <span class="highlight">direitos</span> com etica
+      </h1>
 
-  <hr>
+      <p class="hero-subtitle animate-fadeInUp delay-200">
+        Atendimento personalizado e estrategico em Direito Civil, Familia e Consumidor.
+        Comprometimento total com a justica e seus direitos.
+      </p>
 
-  <main>
-    <section id="home" class="home container">
-
-      <div class="container__caixa">
-        <h1>LIVIA MARIA | ADVOCACIA</h1>
-        <p>
-          Defendendo seus direitos com ética, estratégia e comprometimento, oferecendo um atendimento
-          personalizado e eficaz.
-        </p>
+      <div class="hero-actions animate-fadeInUp delay-300">
+        <a href="https://wa.me/5537998325040" target="_blank" class="btn btn-primary btn-lg">
+          <i class="fab fa-whatsapp"></i>
+          Consulta Gratuita
+        </a>
+        <a href="#about" class="btn btn-outline btn-lg">
+          <span>Conheca Nossa Equipe</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
 
-    </section>
+      <!-- Stats -->
+      <div class="hero-stats animate-fadeInUp delay-400">
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Casos Atendidos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Anos de Experiencia</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Clientes Satisfeitos</span>
+        </div>
+      </div>
+    </div>
 
-    <section id="about">
-      <app-about></app-about>
-    </section>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" (click)="scrollToSection('about')">
+      <span>Role para explorar</span>
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
 
-    <section id="areas">
-      <app-areas></app-areas>
-    </section>
+  <!-- Profissionais Section -->
+  <section id="about" class="section-profissionais">
+    <div class="section-header">
+      <span class="section-badge">Nossa Equipe</span>
+      <h2 class="section-title">Profissionais Qualificados</h2>
+      <p class="section-subtitle">Advogadas dedicadas a oferecer solucoes juridicas eficientes</p>
+    </div>
+    <app-about></app-about>
+  </section>
 
+  <!-- Areas Section -->
+  <section id="areas" class="section-areas">
+    <div class="section-header light">
+      <span class="section-badge">Especialidades</span>
+      <h2 class="section-title">Areas de Atuação</h2>
+      <p class="section-subtitle">Atuamos com excelencia nas principais areas do Direito</p>
+    </div>
+    <app-areas></app-areas>
+  </section>
 
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <app-testimonials></app-testimonials>
+  </section>
 
-    <section id="contact">
-      <app-contact></app-contact>
-    </section>
+  <!-- FAQ Section -->
+  <section id="faq">
+    <app-faq></app-faq>
+  </section>
 
-  </main> F
+  <!-- Contact Section -->
+  <section id="contact" class="section-contact">
+    <div class="section-header">
+      <span class="section-badge">Fale Conosco</span>
+      <h2 class="section-title">Entre em Contato</h2>
+      <p class="section-subtitle">Pronto para ajudar voce. Entre em contato e agende sua consulta.</p>
+    </div>
+    <app-contact></app-contact>
+  </section>
+</main>
 
-</body>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <img src="../assets/imagens/M.png" alt="Livia Maria" class="footer-logo">
+      <p class="footer-tagline">Excelencia e comprometimento na defesa dos seus direitos.</p>
+    </div>
 
-</html>
+    <div class="footer-links">
+      <div class="footer-section">
+        <h4>Links Rapidos</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Profissionais</a></li>
+          <li><a href="#areas">Areas de Atuação</a></li>
+          <li><a href="#testimonials">Depoimentos</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Areas de Atuação</h4>
+        <ul>
+          <li><a href="#areas">Direito Civil</a></li>
+          <li><a href="#areas">Direito de Familia</a></li>
+          <li><a href="#areas">Direito do Consumidor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <ul class="contact-list">
+          <li><i class="fab fa-whatsapp"></i> (37) 99832-5040</li>
+          <li><i class="fas fa-envelope"></i> liviasilveiramaria&#64;gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Formiga - MG</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{currentYear}} Livia Maria Advocacia. Todos os direitos reservados.</p>
+    <p class="footer-credit">Desenvolvido com <i class="fas fa-heart"></i> para excelencia juridica</p>
+  </div>
+</footer>

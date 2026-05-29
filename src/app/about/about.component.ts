@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { MatCardModule } from '@angular/material/card';  // Certifique-se de importar MatCardModule
 import { CommonModule } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MaisInformacoesLiviaMariaComponent } from '../MaisInformacoesLiviaMaria/MaisInformacoesLiviaMaria.component';
 import { MaisInformacoesGabrieleDassaComponent } from '../MaisInformacoesGabrieleDassa/MaisInformacoesGabrieleDassa.component';
 
+/**
+ * Componente de Profissionais
+ * Exibe cards elegantes dos advogados da equipe
+ */
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [MatCardModule, CommonModule, MatDialogModule],
+  imports: [
+    CommonModule,
+    MatDialogModule,
+    MaisInformacoesLiviaMariaComponent,
+    MaisInformacoesGabrieleDassaComponent
+  ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
@@ -17,45 +24,27 @@ export class AboutComponent {
 
   constructor(private dialog: MatDialog) { }
 
-
-  // Array contendo as informações do card
-  cardData = [
-    {
-      index: 1,
-      title: 'LÍVIA MARIA DA SILVEIRA | ADVOGADA',
-      subtitle: 'OAB 239.128',
-      imageSrc: '../../assets/imagens/Livia.jpg', // Caminho da imagem
-      imageAlt: 'Photo of Livia'
-    },
-    {
-      index: 2,
-      title: 'GABRIELE DASSA CALIXTO',
-      subtitle: '      ',
-      imageSrc: '../../assets/imagens/gabi2.png', // Caminho da imagem
-      imageAlt: 'Photo of GABRIELE DASSA CALIXTO'
-    }
-  ];
-
-
-
-
-  openDialog(index: any) {
-
+  /**
+   * Abre o modal de mais informacoes do profissional
+   * @param index - 1 para Livia Maria, 2 para Gabriele Dassa
+   */
+  openDialog(index: number): void {
     if (index === 1) {
       this.dialog.open(MaisInformacoesLiviaMariaComponent, {
-        width: 'auto',
-        height: 'auto'
+        width: '90%',
+        maxWidth: '800px',
+        height: 'auto',
+        maxHeight: '90vh',
+        panelClass: 'custom-dialog'
       });
-    }
-    else if (index === 2) {
+    } else if (index === 2) {
       this.dialog.open(MaisInformacoesGabrieleDassaComponent, {
-        width: 'auto',
-        height: 'auto'
+        width: '90%',
+        maxWidth: '800px',
+        height: 'auto',
+        maxHeight: '90vh',
+        panelClass: 'custom-dialog'
       });
     }
-
   }
-
-
-
 }

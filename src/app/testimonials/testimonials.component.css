@@ -1,0 +1,245 @@
+/* ============================================
+   DEPOIMENTOS - DESIGN MODERNO
+   ============================================ */
+
+.testimonials-section {
+  padding: 80px 20px;
+  background: var(--neutral-cream);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(201, 162, 39, 0.1);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--neutral-gray);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Container */
+.testimonials-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card */
+.testimonial-card {
+  background: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.quote-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+}
+
+.quote-icon i {
+  font-size: 1.5rem;
+  color: var(--neutral-white);
+}
+
+.testimonial-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--neutral-gray);
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* Author */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.author-avatar {
+  width: 60px;
+  height: 60px;
+  background: var(--neutral-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-avatar i {
+  font-size: 1.5rem;
+  color: var(--neutral-gray);
+}
+
+.author-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  margin: 0 0 5px;
+}
+
+.author-role {
+  font-size: 0.9rem;
+  color: var(--neutral-gray);
+}
+
+/* Rating */
+.testimonial-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.testimonial-rating i {
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+}
+
+/* Controls */
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.control-btn {
+  width: 45px;
+  height: 45px;
+  background: var(--neutral-white);
+  border: 2px solid var(--neutral-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.control-btn:hover {
+  background: var(--primary-navy);
+  border-color: var(--primary-navy);
+}
+
+.control-btn:hover i {
+  color: var(--neutral-white);
+}
+
+.control-btn i {
+  color: var(--primary-navy);
+  font-size: 1rem;
+  transition: color var(--transition-fast);
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: var(--neutral-light);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dot.active {
+  background: var(--accent-gold);
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background: var(--accent-gold-light);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 35px 25px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .quote-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .quote-icon i {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
